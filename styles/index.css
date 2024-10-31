@@ -5,8 +5,14 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 100dvh;
+}
+
+.user-input {
+    font-size: 40px;
+    margin: auto 0 0 0;
 }
 
 .grid-container {
@@ -16,7 +22,7 @@ body {
     grid-template-columns: auto auto auto;
     text-align: center;
     font-size: 40px;
-    margin: auto;
+    margin: 0 auto auto auto;
     
 }
 

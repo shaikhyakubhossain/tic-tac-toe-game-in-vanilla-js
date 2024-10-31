@@ -1,6 +1,9 @@
 const gridContainer = document.getElementById('gridContainer');
+const userInput = document.getElementById('userInput');
+
 const playerInput = Math.random() > 0.5 ? 'X' : 'O';
-const aiInput = playerInput === 'X' ? 'O' : 'X'
+const aiInput = playerInput === 'X' ? 'O' : 'X';
+userInput.textContent = `Player: ${playerInput} | AI: ${aiInput}`
 
 window.onload = () => {
     console.log("window loaded");
