@@ -26,6 +26,7 @@ body {
     background-color: rgba(0, 0, 0, 0.150);
     margin: 2px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .grid-block:hover {

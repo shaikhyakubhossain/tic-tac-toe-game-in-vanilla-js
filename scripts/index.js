@@ -1,4 +1,6 @@
 const gridContainer = document.getElementById('gridContainer');
+const playerInput = Math.random() > 0.5 ? 'X' : 'O';
+const aiInput = playerInput === 'X' ? 'O' : 'X'
 
 window.onload = () => {
     console.log("window loaded");
@@ -17,9 +19,15 @@ const generateGrid = () => {
 
 const handleClick = (event) => {
     const current = event.target;
-    current.textContent = "O";
+    if(current.textContent === ''){
+        current.textContent = playerInput;
+    }
+    else{
+        return
+    }
     checkMatch();
     easyAi();
+    checkMatch();
 }
 
 const easyAi = () => {
@@ -30,8 +38,8 @@ const easyAi = () => {
         }
     }
     const randomChoice = aiChoiceArr[parseInt(Math.random() * aiChoiceArr.length - 1)];
-    gridContainer.children[randomChoice].textContent = "X"  
-
+    console.log(randomChoice)
+    gridContainer.children[randomChoice].textContent = aiInput;
 }
 
 const checkMatch = () => {
