@@ -2,11 +2,11 @@ const gridContainer = document.getElementById('gridContainer');
 
 window.onload = () => {
     console.log("window loaded");
-    generateGrid(9)
+    generateGrid()
 }
 
-const generateGrid = (size) => {
-    for(let i = 0; i < size; i++){
+const generateGrid = () => {
+    for(let i = 0; i < 9; i++){
         const createElem = document.createElement('div');
         createElem.classList.add('grid-block');
         createElem.onclick = handleClick;
@@ -22,9 +22,19 @@ const handleClick = (event) => {
 }
 
 const checkMatch = () => {
-    for(let i = 0; i < 3; i++){
+    for(let i = 0; i < 9; i += 3){
         if(gridContainer.children[i].textContent !== '' && gridContainer.children[i].textContent === gridContainer.children[i + 1].textContent && gridContainer.children[i].textContent === gridContainer.children[i + 2].textContent){
-            alert("match");
+            alert("horizontal match");
+        }
+    }
+    for(let i = 0; i < 3; i++ ){
+        if(gridContainer.children[i].textContent !== '' && gridContainer.children[i].textContent === gridContainer.children[i + 3].textContent && gridContainer.children[i].textContent === gridContainer.children[i + 6].textContent){
+            alert("vertical match");
+        }
+    }
+    for(let i = 0; i < 2; i++){
+        if(gridContainer.children[i].textContent !== '' && gridContainer.children[i].textContent === gridContainer.children[i + 4].textContent && gridContainer.children[i].textContent === gridContainer.children[i + 8].textContent){
+            alert("diagonal match");
         }
     }
 }
