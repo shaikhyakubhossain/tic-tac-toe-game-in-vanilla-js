@@ -19,6 +19,19 @@ const handleClick = (event) => {
     const current = event.target;
     current.textContent = "O";
     checkMatch();
+    easyAi();
+}
+
+const easyAi = () => {
+    const aiChoiceArr = [];
+    for(let i = 0; i < 9; i++){
+        if(gridContainer.children[i].textContent === ''){
+            aiChoiceArr.push(i);
+        }
+    }
+    const randomChoice = aiChoiceArr[parseInt(Math.random() * aiChoiceArr.length - 1)];
+    gridContainer.children[randomChoice].textContent = "X"  
+
 }
 
 const checkMatch = () => {
