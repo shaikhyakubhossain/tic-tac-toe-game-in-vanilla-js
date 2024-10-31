@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100dvh;
+}
+
+.grid-container {
+    width: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    font-size: 40px;
+    margin: auto;
+    
+}
+
+.grid-block {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.150);
+    /* margin: auto; */
+}
+
+.grid-block:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
