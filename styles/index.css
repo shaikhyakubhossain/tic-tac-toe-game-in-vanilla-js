@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    text-align: center;
 }
 
 body {
@@ -23,7 +24,8 @@ body {
     width: 100px;
     height: 100px;
     background-color: rgba(0, 0, 0, 0.150);
-    /* margin: auto; */
+    margin: 2px;
+    border-radius: 10px;
 }
 
 .grid-block:hover {
