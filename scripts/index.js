@@ -47,18 +47,27 @@ const easyAi = () => {
 const checkMatch = () => {
     for(let i = 0; i < 9; i += 3){
         if(gridContainer.children[i].textContent !== '' && gridContainer.children[i].textContent === gridContainer.children[i + 1].textContent && gridContainer.children[i].textContent === gridContainer.children[i + 2].textContent){
+            gridContainer.children[i].style.backgroundColor = '#09FF0050';
+            gridContainer.children[i + 1].style.backgroundColor = '#09FF0050';
+            gridContainer.children[i + 2].style.backgroundColor = '#09FF0050';
             alert(gridContainer.children[i].textContent === aiInput ? "AI Wins" : "Player Wins");
             return
         }
     }
     for(let i = 0; i < 3; i++ ){
         if(gridContainer.children[i].textContent !== '' && gridContainer.children[i].textContent === gridContainer.children[i + 3].textContent && gridContainer.children[i].textContent === gridContainer.children[i + 6].textContent){
+            gridContainer.children[i].style.backgroundColor = '#09FF0050';
+            gridContainer.children[i + 3].style.backgroundColor = '#09FF0050';
+            gridContainer.children[i + 6].style.backgroundColor = '#09FF0050';
             alert(gridContainer.children[i].textContent === aiInput ? "AI Wins" : "Player Wins");
             return
         }
     }
     for(let i = 0; i < 2; i++){
         if(gridContainer.children[i].textContent !== '' && gridContainer.children[i].textContent === gridContainer.children[i + 4].textContent && gridContainer.children[i].textContent === gridContainer.children[i + 8].textContent){
+            gridContainer.children[i].style.backgroundColor = '#09FF0050';
+            gridContainer.children[i + 4].style.backgroundColor = '#09FF0050';
+            gridContainer.children[i + 8].style.backgroundColor = '#09FF0050';
             alert(gridContainer.children[i].textContent === aiInput ? "AI Wins" : "Player Wins");
             return
         }

@@ -21,12 +21,16 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0 auto auto auto;
     
 }
 
 .grid-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 100px;
     background-color: rgba(0, 0, 0, 0.150);
