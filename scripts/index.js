@@ -49,6 +49,16 @@ const easyAi = () => {
     gridContainer.children[randomChoice].textContent = aiInput;
 }
 
+const showToast = (message) => {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.remove('hideToast');
+    toast.classList.add('showToast');
+    setTimeout(() => {
+        toast.classList.remove('hideToast');
+    }, 3000);
+}
+
 const checkMatch = (type) => {
     //default diagonal
     let size = 2;
@@ -69,7 +79,8 @@ const checkMatch = (type) => {
             gridContainer.children[i].style.backgroundColor = '#09FF0050';
             gridContainer.children[i + second].style.backgroundColor = '#09FF0050';
             gridContainer.children[i + third].style.backgroundColor = '#09FF0050';
-            alert(gridContainer.children[i].textContent === aiInput ? "AI Wins" : "Player Wins");
+            // alert(gridContainer.children[i].textContent === aiInput ? "AI Wins" : "Player Wins");
+            showToast(gridContainer.children[i].textContent === aiInput ? "AI Wins" : "Player Wins");
             return
         }
     }

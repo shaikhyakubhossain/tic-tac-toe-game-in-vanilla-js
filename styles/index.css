@@ -66,3 +66,25 @@ body {
   text-decoration: none;
   color: black;
 }
+
+.toast {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  margin: 10px 0 0 10px;
+  text-align: center;
+  font-size: 20px;
+  transition: transform 0.5s;
+}
+
+.showToast {
+  transform: translateX(0px);
+}
+
+.hideToast {
+  transform: translateX(-130px);
+}
